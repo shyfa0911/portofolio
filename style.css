@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root { 
+    --background: #02111E;
+    --second-bg-color: #152534; 
+    --text-color: white;
+    --main-color: #4FB2F4;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+}
+
+/* navbar & header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5rem;
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;  
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.navbar a {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3rem;
+    color: var(--main-color);
+    display: none;
+}
+
+
+/* menu home */
+.button-home{
+    border-radius: 20px;
+    background: var(--second-bg-color);
+    padding: 10px;
+    padding-inline: 20px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid var(--text-color);
+    margin-left: 500px;
+    margin-top: 75px;  
+    box-shadow: 0 0 10px var(--main-color);
+}
+.button-home:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.home{
+    padding-left: 200px;
+    padding-bottom: 250px;
+    padding-top: 200px;
+    display: flex;
+}
+
+.home-text{
+    padding-top: 50px;
+}
+.home h1{
+    font-size: 70px;
+}
+
+.home h3{
+    font-size: 60px;
+}
+
+.home-img{
+    width: 600px;
+    max-width: 100%;
+    padding-left: 200px;
+}
+
+i {
+    font-size: 5rem;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+i:hover{
+    color: var(--main-color);
+}
+
+.text-animation {
+    font-size: 65px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation ::before{
+    content: "UI/UX designer";
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--main-color);
+    animation: word 20s infinite;
+}
+
+.text-animation ::after{
+    content: "";
+    padding-bottom: 10px;
+    background-color: var(--background);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--background);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes typing{
+10%,
+15%,
+30%,
+35%,
+50%,
+70%,
+75%,
+90%,
+95%{
+    width: 0;
+}
+}
+
+/* aboutme  */
+.aboutme {
+    text-align: left; 
+    display: flex;
+    padding: 80px;
+    background: #152534;
+}
+
+.text-aboutme{
+    display: block;
+    padding-left: 100px;
+}
+
+.aboutme-img{
+    width: 400px;
+    padding-left: 100px;
+}
+
+.aboutme p{
+    font-size: 17px;
+    padding-top: 1rem;
+}
+
+.aboutme h1{
+    font-size: 60px;
+}
+
+.aboutme h2 {
+    font-size: 40px;
+}
+
+.button-cv{
+    border-radius: 20px;
+    background: var(--background);
+    padding: 10px;
+    padding-inline: 20px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid var(--text-color);
+    margin-top: 20px;
+}
+.button-cv:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--main-color) ;
+}
+
+.text-animation1 {
+    font-size: 65px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation1 span {
+    position: relative;
+}
+
+.text-animation1 ::before{
+    content: "UI/UX designer";
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--main-color);
+    animation: word 20s infinite;
+}
+
+.text-animation1 ::after{
+    content: "";
+    padding-bottom: 10px;
+    background-color: var(--second-bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--background);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes typing{
+10%,
+15%,
+30%,
+35%,
+50%,
+70%,
+75%,
+90%,
+95%{
+    width: 0;
+}
+}
+
+/* skill */
+.skill{
+    padding-top: 100px; 
+
+    margin-bottom: 100px;
+    justify-items: center;
+}
+.img-skill{
+    justify-content: center;
+    width: 150px;   
+    border: var(--second-bg-color);
+    border-radius: 20px;
+    background: var(--second-bg-color);
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0,4s ease-in-out;
+}
+
+.img-skill:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.skill h1{
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+
+/* projek */
+.Project {
+    text-align: center;
+    font-size: 20px;
+    padding: 100px;
+}
+
+.Project h1 {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.project-left{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 40px;
+}
+.project-left img{
+    width: 500px;
+}
+
+.Project p {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+
+.project-right{
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.project-right img{
+    width: 500px;
+}
+
+.button-project{
+    border-radius: 20px;
+    background: var(--background);
+    padding: 10px;
+    padding-inline: 20px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid var(--text-color);
+    justify-items: center;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* contact */
+.contact h1 {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+        border-radius:30px;
+        border: 1px solid #152534;
+        width: fit-content;
+        margin-inline: auto;
+        margin-bottom: 100px;
+        color: white;
+        background: #152534;
+        padding: 70px;
+        box-shadow: 0 0 25px var(--main-color);
+}
+
+.input-contact {
+    padding: 20px; 
+    padding-right: 30px;
+    margin-bottom: 30px; 
+    border-radius: 30px;
+}
+
+.input-contact2 {
+    padding-bottom: 100px; 
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 100px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+
+
+
+.button-message{
+    border-radius: 20px;
+    background: var(--background);
+    padding: 10px;
+    padding-inline: 20px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid var(--text-color);
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.button-message :hover{
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* footer */
+footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: var(--second-bg-color);
+    margin-top: 20px;
+    justify-items: center;
+}
+.footer h1{
+    font-size: 20px;
+}
+.footer p{
+    font-size: 15px;
+    margin-top: 10px;
+}
