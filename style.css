@@ -26,7 +26,6 @@ body {
     color: var(--text-color);
 }
 
-/* navbar & header */
 .header {
     position: fixed;
     top: 0;
@@ -76,19 +75,18 @@ span {
     font-size: 3rem;
     color: var(--main-color);
     display: none;
+    cursor: pointer;
 }
 
-
-/* menu home */
 .button-home{
     border-radius: 20px;
     background: var(--second-bg-color);
     padding: 10px;
-    padding-inline: 20px;
+    padding-inline: 10px;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     border: 1px solid var(--text-color);
-    margin-left: 500px;
+    margin-left: 250px;
     margin-top: 75px;  
     box-shadow: 0 0 10px var(--main-color);
 }
@@ -98,9 +96,9 @@ span {
 }
 
 .home{
-    padding-left: 200px;
+    padding-left: 100px;
     padding-bottom: 250px;
-    padding-top: 200px;
+    padding-top: 150px;
     display: flex;
 }
 
@@ -108,11 +106,11 @@ span {
     padding-top: 50px;
 }
 .home h1{
-    font-size: 70px;
+    font-size: 50px;
 }
 
 .home h3{
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .home-img{
@@ -358,6 +356,8 @@ i:hover{
     border: 1px solid var(--text-color);
     justify-items: center;
     box-shadow: 0 0 10px var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* contact */
@@ -433,4 +433,33 @@ footer{
 .footer p{
     font-size: 15px;
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg-color);
+        flex-direction: column;
+        padding: 1rem 0;
+        z-index: 10;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+        font-size: 2rem;
+        text-align: center;
+        margin-left: 0; 
+    }
+
+    #menu-icon {
+        display: block;
+    }
 }
